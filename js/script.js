@@ -56,10 +56,11 @@ const timer = setInterval (function()  {
             i++;
             // faccio riconoscere i numeri  
               if (fiveNumbers.includes(insert)){
-                  numbers.innerHTML += ` ${insert} Numero corretto `
+                  numbers.innerHTML += ` ${insert} Numero corretto <br> `
               } else {
-                  numbers.innerHTML += ` ${insert} Numero NON corretto `
+                  numbers.innerHTML += ` ${insert} Numero NON corretto <br> `
               }
+              
         }
       }
       
