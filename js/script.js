@@ -36,7 +36,7 @@ function disappear() {
     numbers.innerHTML = '';
 
 // creo il timer di 30secondi
-let seconds = 2;
+let seconds = 30;
 
 const timer = setInterval (function()  { 
       
@@ -60,6 +60,7 @@ const timer = setInterval (function()  {
               } else {
                   numbers.innerHTML += ` ${insert} Numero NON corretto <br> `
               }
+              
               
         }
       }
