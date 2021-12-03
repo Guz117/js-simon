@@ -47,9 +47,16 @@ const timer = setInterval (function()  {
       } else {
           clearInterval(timer)
           numbers.innerHTML = '';
+        // creo il prompt
+          let insert = parseInt(prompt('Inserisci i numeri che hai visto separandoli con uno spazio'));
+        // faccio riconoscere i numeri  
+          if (fiveNumbers.includes(insert)){
+              console.log('you win');
+          }
       }
       
     }, 1000);
+    
 }
 
 
