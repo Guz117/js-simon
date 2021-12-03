@@ -36,7 +36,7 @@ function disappear() {
     numbers.innerHTML = '';
 
 // creo il timer di 30secondi
-let seconds = 30;
+let seconds = 2;
 
 const timer = setInterval (function()  { 
       
@@ -48,11 +48,19 @@ const timer = setInterval (function()  {
           clearInterval(timer)
           numbers.innerHTML = '';
         // creo il prompt
-          let insert = parseInt(prompt('Inserisci i numeri che hai visto separandoli con uno spazio'));
-        // faccio riconoscere i numeri  
-          if (fiveNumbers.includes(insert)){
-              console.log('you win');
-          }
+        let i = 0;
+
+        while(i < 5) {
+            const insert =  parseInt(prompt('inserisci un numero'));
+            console.log(insert)            
+            i++;
+            // faccio riconoscere i numeri  
+              if (fiveNumbers.includes(insert)){
+                  console.log('you win');
+              } else {
+                  console.log('you lose')
+              }
+        }
       }
       
     }, 1000);
