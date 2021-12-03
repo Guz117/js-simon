@@ -7,6 +7,10 @@ Dopo che sono stati inseriti i 5 numeri, il software dice
 quanti e quali dei numeri da indovinare sono stati individuati.
 */
 
+
+
+
+
 // creo collegamento per stampare i numeri in pagina
 let numbers = document.getElementById('numbers');
 
@@ -27,12 +31,12 @@ numbers.innerHTML = 'Guarda questi 5 numeri e ricordali: ' + fiveNumbers;
 
 
 // faccio sparire dal dom i 5 numeri
-setTimeout(disappear, 5000);
+setTimeout(disappear, 3000);
 function disappear() {
     numbers.innerHTML = '';
 
 // creo il timer di 30secondi
-let seconds = 30;
+let seconds = 2;
 
 const timer = setInterval (function()  { 
       
@@ -47,14 +51,14 @@ const timer = setInterval (function()  {
         let i = 0;
 
         while(i < 5) {
-            const insert =  parseInt(prompt('Inserisci i numeri visti'));
+            const insert =  parseInt(prompt('inserisci un numero'));
             console.log(insert)            
             i++;
             // faccio riconoscere i numeri  
               if (fiveNumbers.includes(insert)){
-                  console.log('numero correto');
+                  numbers.innerHTML += ` ${insert} Numero corretto `
               } else {
-                  console.log('numero errato')
+                  numbers.innerHTML += ` ${insert} Numero NON corretto `
               }
         }
       }
