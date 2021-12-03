@@ -7,10 +7,6 @@ Dopo che sono stati inseriti i 5 numeri, il software dice
 quanti e quali dei numeri da indovinare sono stati individuati.
 */
 
-
-
-
-
 // creo collegamento per stampare i numeri in pagina
 let numbers = document.getElementById('numbers');
 
@@ -56,9 +52,9 @@ const timer = setInterval (function()  {
             i++;
             // faccio riconoscere i numeri  
               if (fiveNumbers.includes(insert)){
-                  console.log('you win');
+                  console.log('numero correto');
               } else {
-                  console.log('you lose')
+                  console.log('numero errato')
               }
         }
       }
